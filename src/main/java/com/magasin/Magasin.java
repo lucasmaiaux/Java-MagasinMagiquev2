@@ -49,6 +49,13 @@ class Magasin {
             }
             case "Kryptonite" -> {
             }
+            case "Pouvoirs magiques" -> {
+                if (item.quality > 0) {
+                    item.quality = Math.max(0,item.quality - 2);
+                }
+
+                item.sellIn = item.sellIn - 1;
+            }
             default -> {
                 if (item.quality > 0) {
                     item.quality = item.quality - 1;
