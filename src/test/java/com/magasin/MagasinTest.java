@@ -10,20 +10,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MagasinTest {
 
     @Test
-    void foo() {
+    public void updateQuality() {
         String[] names = new String[]{"Comté", "Pass VIP Concert", "Kryptonite", "Truc"};
         Integer[] sellIns = new Integer[]{-1,0,1,5,10,15};
         Integer[] qualities = new Integer[]{0, 25, 55};
 
         CombinationApprovals.verifyAllCombinations(
-                this::testItem,
+                this::doUpdateQuality,
                 names,
                 sellIns,
                 qualities
         );
     }
 
-    String testItem(String name, int sell_in, int quality) {
+    private String doUpdateQuality(String name, int sell_in, int quality) {
         Item[] items = new Item[] { new Item(name, sell_in, quality)};
         Magasin app = new Magasin(items);
         app.updateQuality();
