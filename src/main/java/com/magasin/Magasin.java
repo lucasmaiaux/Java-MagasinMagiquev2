@@ -18,7 +18,7 @@ class Magasin {
                 }
             } else {
                 if (items[i].quality < 50) {
-                    items[i].quality = items[i].quality + 3;
+                    items[i].quality = items[i].quality + 4;
 
                     if (items[i].name.equals("Pass VIP Concert")) {
                         if (items[i].sellIn < 11) {
